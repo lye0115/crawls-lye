@@ -1,0 +1,447 @@
+{
+  "timestamp": "20250701171403",
+  "total_accounts": 2,
+  "successful_accounts": 2,
+  "failed_accounts": 0,
+  "total_records": 50,
+  "accounts_summary": [
+    {
+      "account": "0y权益包视频33164",
+      "status": "success",
+      "records": 25
+    },
+    {
+      "account": "0y随心看大屏视频32706",
+      "status": "success",
+      "records": 25
+    }
+  ],
+  "merged_data": [
+    {
+      "record_id": "744702",
+      "source_account": "0y权益包视频33164"
+    },
+    {
+      "record_id": "744701",
+      "source_account": "0y权益包视频33164"
+    },
+    {
+      "record_id": "744706",
+      "source_account": "0y权益包视频33164"
+    },
+    {
+      "record_id": "744703",
+      "source_account": "0y权益包视频33164"
+    },
+    {
+      "record_id": "742563",
+      "source_account": "0y权益包视频33164"
+    },
+    {
+      "record_id": "743439",
+      "source_account": "0y权益包视频33164"
+    },
+    {
+      "record_id": "742988",
+      "source_account": "0y权益包视频33164"
+    },
+    {
+      "record_id": "743043",
+      "source_account": "0y权益包视频33164"
+    },
+    {
+      "record_id": "743437",
+      "source_account": "0y权益包视频33164"
+    },
+    {
+      "record_id": "739462",
+      "source_account": "0y权益包视频33164"
+    },
+    {
+      "record_id": "739461",
+      "source_account": "0y权益包视频33164"
+    },
+    {
+      "record_id": "739463",
+      "source_account": "0y权益包视频33164"
+    },
+    {
+      "record_id": "739075",
+      "source_account": "0y权益包视频33164"
+    },
+    {
+      "record_id": "739076",
+      "source_account": "0y权益包视频33164"
+    },
+    {
+      "record_id": "736656",
+      "source_account": "0y权益包视频33164"
+    },
+    {
+      "record_id": "737237",
+      "source_account": "0y权益包视频33164"
+    },
+    {
+      "record_id": "737856",
+      "source_account": "0y权益包视频33164"
+    },
+    {
+      "record_id": "737854",
+      "source_account": "0y权益包视频33164"
+    },
+    {
+      "record_id": "737855",
+      "source_account": "0y权益包视频33164"
+    },
+    {
+      "record_id": "737828",
+      "source_account": "0y权益包视频33164"
+    },
+    {
+      "record_id": "735161",
+      "source_account": "0y权益包视频33164"
+    },
+    {
+      "record_id": "736010",
+      "source_account": "0y权益包视频33164"
+    },
+    {
+      "record_id": "735132",
+      "source_account": "0y权益包视频33164"
+    },
+    {
+      "record_id": "735729",
+      "source_account": "0y权益包视频33164"
+    },
+    {
+      "record_id": "735133",
+      "source_account": "0y权益包视频33164"
+    },
+    {
+      "record_id": "745756",
+      "source_account": "0y随心看大屏视频32706"
+    },
+    {
+      "record_id": "746079",
+      "source_account": "0y随心看大屏视频32706"
+    },
+    {
+      "record_id": "742304",
+      "source_account": "0y随心看大屏视频32706"
+    },
+    {
+      "record_id": "742306",
+      "source_account": "0y随心看大屏视频32706"
+    },
+    {
+      "record_id": "739430",
+      "source_account": "0y随心看大屏视频32706"
+    },
+    {
+      "record_id": "739434",
+      "source_account": "0y随心看大屏视频32706"
+    },
+    {
+      "record_id": "739431",
+      "source_account": "0y随心看大屏视频32706"
+    },
+    {
+      "record_id": "737632",
+      "source_account": "0y随心看大屏视频32706"
+    },
+    {
+      "record_id": "737246",
+      "source_account": "0y随心看大屏视频32706"
+    },
+    {
+      "record_id": "737349",
+      "source_account": "0y随心看大屏视频32706"
+    },
+    {
+      "record_id": "737247",
+      "source_account": "0y随心看大屏视频32706"
+    },
+    {
+      "record_id": "736562",
+      "source_account": "0y随心看大屏视频32706"
+    },
+    {
+      "record_id": "735415",
+      "source_account": "0y随心看大屏视频32706"
+    },
+    {
+      "record_id": "732594",
+      "source_account": "0y随心看大屏视频32706"
+    },
+    {
+      "record_id": "733369",
+      "source_account": "0y随心看大屏视频32706"
+    },
+    {
+      "record_id": "730900",
+      "source_account": "0y随心看大屏视频32706"
+    },
+    {
+      "record_id": "730377",
+      "source_account": "0y随心看大屏视频32706"
+    },
+    {
+      "record_id": "727342",
+      "source_account": "0y随心看大屏视频32706"
+    },
+    {
+      "record_id": "722224",
+      "source_account": "0y随心看大屏视频32706"
+    },
+    {
+      "record_id": "718536",
+      "source_account": "0y随心看大屏视频32706"
+    },
+    {
+      "record_id": "713512",
+      "source_account": "0y随心看大屏视频32706"
+    },
+    {
+      "record_id": "710513",
+      "source_account": "0y随心看大屏视频32706"
+    },
+    {
+      "record_id": "710514",
+      "source_account": "0y随心看大屏视频32706"
+    },
+    {
+      "record_id": "709721",
+      "source_account": "0y随心看大屏视频32706"
+    },
+    {
+      "record_id": "709864",
+      "source_account": "0y随心看大屏视频32706"
+    }
+  ],
+  "individual_results": [
+    {
+      "account": "0y权益包视频33164",
+      "status": "success",
+      "data": {
+        "url": "https://xc.zjrmob.cn/admin/kscl/order/daily",
+        "page_size": 100,
+        "page_count": 3,
+        "all_page_data": [
+          {
+            "record_id": "744702",
+            "source_account": "0y权益包视频33164"
+          },
+          {
+            "record_id": "744701",
+            "source_account": "0y权益包视频33164"
+          },
+          {
+            "record_id": "744706",
+            "source_account": "0y权益包视频33164"
+          },
+          {
+            "record_id": "744703",
+            "source_account": "0y权益包视频33164"
+          },
+          {
+            "record_id": "742563",
+            "source_account": "0y权益包视频33164"
+          },
+          {
+            "record_id": "743439",
+            "source_account": "0y权益包视频33164"
+          },
+          {
+            "record_id": "742988",
+            "source_account": "0y权益包视频33164"
+          },
+          {
+            "record_id": "743043",
+            "source_account": "0y权益包视频33164"
+          },
+          {
+            "record_id": "743437",
+            "source_account": "0y权益包视频33164"
+          },
+          {
+            "record_id": "739462",
+            "source_account": "0y权益包视频33164"
+          },
+          {
+            "record_id": "739461",
+            "source_account": "0y权益包视频33164"
+          },
+          {
+            "record_id": "739463",
+            "source_account": "0y权益包视频33164"
+          },
+          {
+            "record_id": "739075",
+            "source_account": "0y权益包视频33164"
+          },
+          {
+            "record_id": "739076",
+            "source_account": "0y权益包视频33164"
+          },
+          {
+            "record_id": "736656",
+            "source_account": "0y权益包视频33164"
+          },
+          {
+            "record_id": "737237",
+            "source_account": "0y权益包视频33164"
+          },
+          {
+            "record_id": "737856",
+            "source_account": "0y权益包视频33164"
+          },
+          {
+            "record_id": "737854",
+            "source_account": "0y权益包视频33164"
+          },
+          {
+            "record_id": "737855",
+            "source_account": "0y权益包视频33164"
+          },
+          {
+            "record_id": "737828",
+            "source_account": "0y权益包视频33164"
+          },
+          {
+            "record_id": "735161",
+            "source_account": "0y权益包视频33164"
+          },
+          {
+            "record_id": "736010",
+            "source_account": "0y权益包视频33164"
+          },
+          {
+            "record_id": "735132",
+            "source_account": "0y权益包视频33164"
+          },
+          {
+            "record_id": "735729",
+            "source_account": "0y权益包视频33164"
+          },
+          {
+            "record_id": "735133",
+            "source_account": "0y权益包视频33164"
+          }
+        ]
+      },
+      "thread_id": 123145558315008
+    },
+    {
+      "account": "0y随心看大屏视频32706",
+      "status": "success",
+      "data": {
+        "url": "https://xc.zjrmob.cn/admin/kscl/order/daily",
+        "page_size": 100,
+        "page_count": 3,
+        "all_page_data": [
+          {
+            "record_id": "745756",
+            "source_account": "0y随心看大屏视频32706"
+          },
+          {
+            "record_id": "746079",
+            "source_account": "0y随心看大屏视频32706"
+          },
+          {
+            "record_id": "742304",
+            "source_account": "0y随心看大屏视频32706"
+          },
+          {
+            "record_id": "742306",
+            "source_account": "0y随心看大屏视频32706"
+          },
+          {
+            "record_id": "739430",
+            "source_account": "0y随心看大屏视频32706"
+          },
+          {
+            "record_id": "739434",
+            "source_account": "0y随心看大屏视频32706"
+          },
+          {
+            "record_id": "739431",
+            "source_account": "0y随心看大屏视频32706"
+          },
+          {
+            "record_id": "737632",
+            "source_account": "0y随心看大屏视频32706"
+          },
+          {
+            "record_id": "737246",
+            "source_account": "0y随心看大屏视频32706"
+          },
+          {
+            "record_id": "737349",
+            "source_account": "0y随心看大屏视频32706"
+          },
+          {
+            "record_id": "737247",
+            "source_account": "0y随心看大屏视频32706"
+          },
+          {
+            "record_id": "736562",
+            "source_account": "0y随心看大屏视频32706"
+          },
+          {
+            "record_id": "735415",
+            "source_account": "0y随心看大屏视频32706"
+          },
+          {
+            "record_id": "732594",
+            "source_account": "0y随心看大屏视频32706"
+          },
+          {
+            "record_id": "733369",
+            "source_account": "0y随心看大屏视频32706"
+          },
+          {
+            "record_id": "730900",
+            "source_account": "0y随心看大屏视频32706"
+          },
+          {
+            "record_id": "730377",
+            "source_account": "0y随心看大屏视频32706"
+          },
+          {
+            "record_id": "727342",
+            "source_account": "0y随心看大屏视频32706"
+          },
+          {
+            "record_id": "722224",
+            "source_account": "0y随心看大屏视频32706"
+          },
+          {
+            "record_id": "718536",
+            "source_account": "0y随心看大屏视频32706"
+          },
+          {
+            "record_id": "713512",
+            "source_account": "0y随心看大屏视频32706"
+          },
+          {
+            "record_id": "710513",
+            "source_account": "0y随心看大屏视频32706"
+          },
+          {
+            "record_id": "710514",
+            "source_account": "0y随心看大屏视频32706"
+          },
+          {
+            "record_id": "709721",
+            "source_account": "0y随心看大屏视频32706"
+          },
+          {
+            "record_id": "709864",
+            "source_account": "0y随心看大屏视频32706"
+          }
+        ]
+      },
+      "thread_id": 123145541525504
+    }
+  ]
+}

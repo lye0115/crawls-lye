@@ -1,0 +1,61 @@
+# --- 编译和缓存文件 ---
+__pycache__/       # Python 字节码缓存目录
+*.py[cod]          # 编译后的 Python 文件（.pyc, .pyo, .pyd）
+*$py.class         # Jython 编译文件
+
+# --- 包管理和分发 ---
+build/             # 构建生成的目录
+dist/              # 打包后的分发文件
+*.egg-info/        # 包元数据
+*.egg              # 旧版包格式
+.installed.cfg     # 安装记录
+pip-wheel-metadata/
+wheels/
+
+# --- 虚拟环境 ---
+.env               # 环境变量文件
+.venv/             # 虚拟环境目录（推荐）
+venv/              # 常见虚拟环境目录
+env/               # 其他环境目录
+ENV/
+env.bak/
+venv.bak/
+
+# --- 测试和覆盖率 ---
+.tox/              # Tox 测试环境
+.nox/              # Nox 测试环境
+.coverage          # 覆盖率数据
+.coverage.*        # 临时覆盖率文件
+htmlcov/           # HTML 覆盖率报告
+.pytest_cache/     # Pytest 缓存
+.hypothesis/       # Hypothesis 测试缓存
+
+# --- 日志和临时文件 ---
+*.log              # 日志文件
+*.tmp              # 临时文件
+*.swp              # Vim 交换文件
+
+# --- IDE 和编辑器配置 ---
+.vscode/           # VS Code 配置（可保留部分文件）
+!.vscode/settings.json  # 例外：保留必要配置
+!.vscode/tasks.json
+!.vscode/launch.json
+.idea/             # PyCharm 配置
+.spyderproject     # Spyder 配置
+.ropeproject       # Rope 重构工具配置
+
+# --- 系统文件 ---
+.DS_Store          # macOS 属性文件
+Thumbs.db          # Windows 缩略图缓存
+
+# --- 其他 ---
+# 数据库文件（如 SQLite）
+*.sqlite3
+*.sqlite3-journal
+
+# 文档生成
+docs/_build/       # Sphinx 生成的文档
+/site              # MkDocs 生成的站点
+
+# Jupyter Notebook 临时文件
+.ipynb_checkpoints/
