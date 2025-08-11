@@ -1,0 +1,60 @@
+'''单项歌曲采集
+1、示例歌曲：九万字
+2、网易云比较特殊，在network的media中，歌曲播放时hi获取数据
+3、从2中的请求连接的?前面的字符，复制进行搜索，获取歌曲链接的来源
+4、3搜索的结果为 https://music.163.com/weapi/song/enhance/player/url/v1?csrf_token=e2ce6e09654adb9bb077460f35cf65ee
+5、3中的请求参数为params和encSecKey，需要进行加密
+6、开始逆向查找params和encSecKey的加密过程
+'''
+
+
+import requests
+import os
+import re
+import execjs
+
+free_dir = 'free'
+if not os.path.exists(free_dir):
+  os.makedirs(free_dir)
+
+
+# 爬取单个歌曲的基础url（点击播放后，在network抓取到的请求真实音乐地址的url）
+url = 'https://music.163.com/weapi/song/enhance/player/url/v1?csrf_token=e2ce6e09654adb9bb077460f35cf65ee'
+
+# 抓取的请求参数如下
+data = {
+  'params':'3f4UVZX/Ryow+U6N8V9toDWp5pxK7nYCdpQ0VMn6VyT53syK3K8fsrM8Yyvkv+jyeIPmVwPE5c11+IvWasHRio98uiSElLk5mQTjLAe8sXN7T/qAplevbEYXiLPF8eSR7R0pSEcyB07DHfzUmTVHfUaHh8KhKT8hUP2xU/Q7XYfcwAsk7ZMj9MmlVJeiiwkhrHIP3qHuMyR6teC+q4b75A==',
+  'encSecKey':'62f82e5dfacb269ac9502e720f41e1cb4d27f26956cc3db4fa7d3205215691924ed2ca1cba085de77be4cee01a1a95faac872149a2451dbd17d2cb3aaadaf3770b8d4f1a4ce6324032924cf6149355d38ab116c9ec89c5d9f70621af9586536d5288122777a0013afb8913e088af18ee1376316a7dbfe104fd91c03c256f9f14'
+}
+
+'''
+params和encSecKey的加密过程
+1、params的加密过程
+2、encSecKey的加密过程
+'''
+
+
+'''模拟请求头'''
+headers = {
+  'content-type':'application/x-www-form-urlencoded',
+  'cookie':'NMTID=00Ol8woFUCX2kcw0EdIkQNR8-Cq0LoAAAGVxsBc0Q; _ntes_nnid=d1d2b843473620b40d20ab64bae0a898,1742796253420; _ntes_nuid=d1d2b843473620b40d20ab64bae0a898; WEVNSM=1.0.0; WNMCID=uqnekl.1742796255073.01.0; WM_TID=QI4kA7oyeidBBRQEBUPGJ7BotRU%2B%2FXPF; __snaker__id=D6swI3DkieIBRmMd; sDeviceId=YD-96li8m9pvWhEVlAAUVLSN%2FV8oVDBRulN; ntes_utid=tid._.GFHUSZdE9R9ER1REAAOTJrB84QDBB4Pm._.0; __remember_me=true; ntes_kaola_ad=1; P_INFO=13628108279|1747731894|1|music|00&99|null&null&null#hub&420100#10#0|&0||13628108279; _iuqxldmzr_=32; WM_NI=5iV0aMIQveCNxI0Y4qDozUcLNyFQdAB1fUX5uBG%2B5Rlvz10f4wwJa533clcjTJJq5yIvowZS40NvLekTJlqVHKpIiTu5gdGrnGE64KqNfUiG9lmrT1RU%2BTvxvSnk%2BptLWjc%3D; WM_NIKE=9ca17ae2e6ffcda170e2e6eeb7e842a1b99796ea3c96e78eb2d14a838b9badd63c918f8a8bd780bbabbaa3bb2af0fea7c3b92af7b79ad1e4478b8fba86c246bc9700bab77b88b1b6b6e2488ea78ab2e74b82efaab6db3fb79e89ccb85ab0aab6d2b36ef8a9b9abe43ff1edad8de26298968692b8738baaa198d959f8f08297cf6fa98c868df45e8c95c0aaec60b7eba985c67aae998bd7b741b392aab6ec4dfbb4a393d73b928be5b5f574b68da28caa7cb894998be237e2a3; gdxidpyhxdE=9hI%2FZekUVfMk%5C4p5SNWzMizAtCQa2%2Fa5vAGKBMXjDeXhP%5CwdgmX4oD3qY3SJ2cxoRzAPVVYy2rIWCi1uQeEkO5YXsMu5BK3hP50Gcc2OjXNOVLQZMo30kPVPMQnib28QLKQ0zjS8HeJZmyBNjSeQtG90eUsNaRVwdB3gsILzncjUkxEp%3A1753432309115; __csrf=e2ce6e09654adb9bb077460f35cf65ee; MUSIC_U=009FB6A75E102E71BC86B8CFF70D446B52617E0F43CA2C86C416A7F24C5DAAFCB82EF72049735A700623F73ABE242598476218119777C9414718ED3B277E81D3DB093E5EF04D3F99A1F76CBAB97B9639FF3D189CB306E3D5A9232DF6F9B283B24C5733687AC7D985F540C5E775245009018A51CB197C5273B346EEA1D5F4A9F61FC6C1407DF2080E93CBC42432813C33608AD38F6CAB3EC8CB7CEA8B9C904D524D42E2B6EC9E8CB22772259758F99E8F42E9E0644EE20021C0ECC5F24BC4CEDC5EC34050AD4F5FD9015C01E4F45FC3ED4192B5557BBDD1CB1DE9AC2973FA79FB4ACC7333A1911A4094261905EEE76A298EB7FEC55C26A98105A739F1B25EE7ABA4DEC361F16036F55E8135B7919F250190FEA109FB3636A0FF242197BCE8FCD3B9291025259AD1417D4564512E30F4C858AAAEC4AC84C0ADB3F6A98C4717261778FE3FC5E4EED85656A531425F766A9EF2F4B8C6A37D150D280EC69401C9ACE2BE1726DAE24D33A06BAA08CCA24B674F99348D355122C202B40CDCCB1F0D8A327EDE74A29482BE365B3E7573C886ADE1E1AD4EC1B53B4FD31D18B8C45B0E0F0162; playerid=57576538; JSESSIONID-WYYY=QNZpyR%5CUGgzk5z8nVu6Fw3KHHWy7sYYwwKXyEGq3ADaoIP8Yq5A9IqqiffCtCB74VtWThjyUUmA0%2FCt4oFuUGqU886e9Ini5VEGctBOdpjINogi0lDtYJ6ApiqCTzPxrI3rrBSe6yp5RAkF4hYFgrjX2dUopcn9eN3j340rPhuO%2BuvH%2B%3A1753434898639',
+  'referer':'https://music.163.com/', # 防盗链
+  'user-agent':'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36'
+}
+
+music_data = requests.post(url = url, headers=headers, data=data).json()
+
+music_url = music_data['data'][0]['url']
+
+print(music_url)
+
+try:
+  # 获取音频资源
+  music_content = requests.get(url = music_url, headers=headers).content
+
+
+  # 下载资源
+  with open(f'{free_dir}/九万字.mp3', 'wb') as f:
+    f.write(music_content)
+except Exception as e:
+  print(e)

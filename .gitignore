@@ -59,3 +59,8 @@ docs/_build/       # Sphinx 生成的文档
 
 # Jupyter Notebook 临时文件
 .ipynb_checkpoints/
+
+
+# 爬取的文件夹
+**/auto/
+**/single/
